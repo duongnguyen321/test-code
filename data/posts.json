@@ -1,0 +1,85 @@
+{
+	"posts": [
+		{
+			"content": "## Giới thiệu một chút nha\n\nMình sinh năm 2004, mình hiện là một dev FE, mình **đẹp trai**, mình đang làm trợ giảng tại [F8](https://fullstack.edu.vn), thật ra mấy cái này mọi người xem ở trang chủ có...",
+			"length": 2704,
+			"blog_id": "xin-chao-cac-ban-minh-la-duong",
+			"index": 9999,
+			"title": "Xin chào các bạn, mình là Dương",
+			"image_url": "https://ndng.net/duong.jpg",
+			"created_at": "2023-12-21T13:48:45.052Z",
+			"view_count": 1840
+		},
+		{
+			"content": "## Tại sao cần cài Postgresql?\n\nBạn đang code backend, hoặc có thao tác với database trong code của mình nhưng cần deploy dự án?\n\nBạn sử dụng cơ sở dữ liệu để lưu nhiều dữ liệu hơn trong trang web như...",
+			"length": 3957,
+			"blog_id": "huong-dan-cai-dat-postgresql-tren-server-vps",
+			"index": 7,
+			"title": "Hướng dẫn cài đặt Postgresql trên server VPS",
+			"image_url": "https://www.postgresql.org/media/img/about/press/elephant.png",
+			"created_at": "2024-01-29T05:41:45.650Z",
+			"view_count": 836
+		},
+		{
+			"content": "## Tại sao cần deploy React lên server VPS?\n\nBạn vừa code xong một trang web xịn xò, bạn cảm thấy deploy lên vercel hay netlify hay heroku,... không đủ ngon?\n\nBạn muốn can thiệp sâu vào server xem nó ...",
+			"length": 4647,
+			"blog_id": "huong-dan-deploy-react-len-server-vps-don-gian",
+			"index": 6,
+			"title": "Hướng dẫn deploy React lên server VPS đơn giản",
+			"image_url": "https://service.ndng.net/icons/react.svg",
+			"created_at": "2024-01-28T18:29:19.117Z",
+			"view_count": 1261
+		},
+		{
+			"content": "## React.js là gì?\n\nReact.js là một thư viện JavaScript, được thiết kế bởi Facebook, dùng để xây dựng các giao diện người dùng (UI) hoặc các thành phần UI có thể tái sử dụng.\n\nReact.js cho phép chúng ...",
+			"length": 7186,
+			"blog_id": "tong-quan-ve-react-va-cach-cai-dat",
+			"index": 5,
+			"title": "Tổng quan về React và cách cài đặt",
+			"image_url": "https://service.ndng.net/icons/react.svg",
+			"created_at": "2024-01-28T05:41:45.650Z",
+			"view_count": 1491
+		},
+		{
+			"content": "## Tại sao lại cần sử dụng VPS?\n\nBạn muốn xây dựng một trang web xịn xò, chính xác là một dự án production nho nhỏ?\n\nBạn mua tên miền nhưng sử dụng cùng vercel thì trông không chuyên nghiệp lắm?\n\nBạn ...",
+			"length": 15107,
+			"blog_id": "huong-dan-setup-vps-de-chay-moi-truong-nodejs",
+			"index": 4,
+			"title": "Hướng dẫn setup VPS để chạy môi trường Nodejs",
+			"image_url": "https://github.com/nodejs/nodejs.org/raw/main/public/static/images/logos/nodejs-new-pantone-white.svg",
+			"created_at": "2024-01-28T12:51:36.621Z",
+			"view_count": 773
+		},
+		{
+			"content": "## Tại sao lại cần deploy Express.js?\n\n1. Bạn là một developer backend (Node.js)? Bạn không biết làm thế nào để show dự án?\n2. Bạn muốn tìm một nơi tạm thời để lưu trữ dự án, thử nghiệm một src code?\n...",
+			"length": 4534,
+			"blog_id": "huong-dan-deploy-expressjs-len-vercel",
+			"index": 3,
+			"title": "Hướng dẫn deploy Express.js lên Vercel",
+			"search": "# huong dan deploy express.js len vercel \n\n## tai sao lai can deploy express.js\n\n1. ban la mot developer backend (node.js)? ban khong biet lam the nao de show du an?\n2. ban muon tim mot noi tam thoi đe luu tru du an, thu nghiem mot src code?\n3. ban đang lam mot du an đe đi xin viec, nhung ban chua biet cach deploy?\n\nvercel! mot giai phap kha la... tam đuoc. no cung cap cho chung ta mot moi truong, co the deploy hau het cac app nodejs len đo va tang ban mot database hoan chinh! tuy nhien can phai luu y:\n\n- no chi cho ban tao mot database duy nhat dung cho toan bo cac du an cua ban.\n- no chi limit cho ban 5gb db free.\n- no chammmm cuc ky.\n\nvi vay đung suy nghi toi viec dung no mai mai đe duy tri mot app. hay suy nghi toi viec su dung vps rieng thi tot hon.\n\n## huong dan deploy voi express\n\n### buoc 1: tao file vercel.json\n\ndau tien, hay tao mot file `vercel.json` nhu sau:\n\n```json\n{\n\t\"version\": 2,\n\t\"builds\": [\n\t\t{\n\t\t\t\"src\": \"./app.js\",\n\t\t\t\"use\": \"@vercel/node\"\n\t\t},\n\t\t{\n\t\t\t\"src\": \"public/**\",\n\t\t\t\"use\": \"@vercel/static\"\n\t\t}\n\t],\n\t\"routes\": [\n\t\t{\n\t\t\t\"src\": \"/((?!.*\\\\.\\\\w+$).*)\",\n\t\t\t\"dest\": \"/app.js\"\n\t\t},\n\t\t{\n\t\t\t\"src\": \"/(.+\\\\.[a-z]+)$\",\n\t\t\t\"dest\": \"/public/$1\"\n\t\t}\n\t]\n}\n```\n\n### buoc 2.1: config express voi sequelize orm\n\ntruoc tien, hay chuyen file `config/config.json` thanh `config.js` va sua lai đuong dan file config trong\n`.sequelizerc`:\n\n```js\n// .sequelizerc\nconst path = require('path');\n\nmodule.exports = {\n\tconfig: path.resolve('config', 'config.js'),\n};\n```\n\nsau đo file `config.js` se nhu sau:\n\n```js\n// config/config.js\nrequire('dotenv').config();\nconst pg = require('pg');\nmodule.exports = {\n\tdevelopment: {\n\t\tusername: process.env.postgres_user,\n\t\tpassword: process.env.postgres_password,\n\t\tdatabase: process.env.postgres_database,\n\t\thost: process.env.postgres_host,\n\t\tdialect: process.env.db_dialect || 'postgres',\n\t\tport: process.env.db_port || 5432,\n\t\tdialectoptions: {\n\t\t\tssl: {\n\t\t\t\trequire: true,\n\t\t\t},\n\t\t},\n\t\tdialectmodule: pg,\n\t},\n\ttest: {\n\t\tusername: process.env.postgres_user,\n\t\tpassword: process.env.postgres_password,\n\t\tdatabase: process.env.postgres_database,\n\t\thost: process.env.postgres_host,\n\t\tdialect: process.env.db_dialect || 'postgres',\n\t\tport: process.env.db_port || 5432,\n\t\tdialectoptions: {\n\t\t\tssl: {\n\t\t\t\trequire: true,\n\t\t\t},\n\t\t},\n\t\tdialectmodule: pg,\n\t},\n\tproduction: {\n\t\tusername: process.env.postgres_user,\n\t\tpassword: process.env.postgres_password,\n\t\tdatabase: process.env.postgres_database,\n\t\thost: process.env.postgres_host,\n\t\tdialect: process.env.db_dialect || 'postgres',\n\t\tport: process.env.db_port || 5432,\n\t\tdialectoptions: {\n\t\t\tssl: {\n\t\t\t\trequire: true,\n\t\t\t},\n\t\t},\n\t\tdialectmodule: pg,\n\t},\n};\n```\n\nsua mot chut phan **scripts** trong `package.json` nhu sau:\n\n```json\n{\n\t\"scripts\": {\n\t\t\"dev\": \"nodemon ./bin/www\",\n\t\t\"start\": \"node ./bin/www\",\n\t\t\"postinstall\": \"npx sequelize-cli db:migrate\",\n\t\t\"build\": \"npm run postinstall && npm run vercel-build\"\n\t}\n}\n```\n\n### buoc 2.2: config express voi prisma orm\n\nvo cung đon gian, đon gian hon sequelize rat nhieu!\n\nchung ta hay sua file `package.json` nhu sau:\n\n```json\n{\n\t\"scripts\": {\n\t\t\"postinstall\": \"npx prisma generate\",\n\t\t\"build\": \"npm run postinstall && npm run vercel-build\"\n\t}\n}\n```\n\n### postinstall la gi? tai sao phai them no?\n\nrat đon gian, `postinstall` trong npm la mot script chay sau khi `npm install` hoan tat. trong truong hop nay, no đang dung đe migrate database.\n\nvercel co mot co che build mac đinh, minh ghi đe no bang cach su dung them script build.\n\n### buoc 3: khoi tao database trong vercel\n\ntruy cap vao đuong dan nay: `https://vercel.com/[username]/~/stores`\n\ntrong đo: `username` la `username` vercel cua ban!\n\nsau khi đa khoi tap database thanh cong,\n\n### buoc 4: đang nhap va push code len vercel\n\n1. đau tien, hay cai đat vercel vao may(neu ban đa lam buoc nay, hay bo qua):\n\n```bash\n\nnpm i -g vercel@latest\n\n```\n\n2. login vao vercel(neu ban đa lam buoc nay, hay bo qua):\n\n```bash\nvercel login\n```\n\n3. push code len vercel(neu ban đa lam buoc nay, hay bo qua):\n\n```bash\nvercel --prod\n```\n\n### lien ket database voi du an\n\ntruy cap vao đuong dan nay: `https://vercel.com/[username]/[project_name]/stores`\n\ntrong đo:\n\n- `username` la `username` vercel cua ban!\n- `project_name` la `project_name` vercel cua ban!\n\nbam nut lien ket la đuoc thoi.\n\n## cac luu y khi su dung\n\n- đe y ten env sinh ra khi link database voi du an, nen đe trong du an giong tren vercel đe đo loi.\n\n- moi tai khoan chi co 1 database, khong tao them đuoc\n\n- nen ket noi database vercel vao pgadmin đe dung cho tien kiem soat\n\n- vercel postgres la hang free, rat cham!!!",
+			"image_url": "https://camo.githubusercontent.com/09a11f3cef0b31aa2f56015680ee1f783ef4ba9234e293793c30fb0b819b691f/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313538383830353835382f7265706f7369746f726965732f76657263656c2f6c6f676f2e706e67",
+			"created_at": "2024-01-26T06:26:06.185Z",
+			"view_count": 806
+		},
+		{
+			"content": "Nhân dịp đầu xuân năm mới, mình lướt web tìm mấy trang có example hay hay để copy về dùng dần, xong mở aside Bing lên hỏi nó tóm tắt trang này cho lẹ, xong cái thấy tính năng này hay hay, kiểu nó hiểu...",
+			"length": 1856,
+			"blog_id": "2-con-chat-ai-trong-nay-khac-nhau-nhung-gi",
+			"index": 2,
+			"title": "2 con chat AI trong này khác nhau những gì?",
+			"image_url": "https://service.ndng.net/duong_reversed.jpg",
+			"created_at": "2024-02-10T17:03:10.554Z",
+			"view_count": 540
+		},
+		{
+			"content": "Chào mọi người, mình vừa sử dụng **Gemini Pro** của **Google** và thêm một số data mới để biến nó trở thành một con trợ lý ảo sử dụng trong trang web. Nó khá thông minh và dữ liệu được training lên đế...",
+			"length": 4664,
+			"blog_id": "minh-vua-tich-hop-ai-vao-trang-cua-minh",
+			"index": 1,
+			"title": "Mình vừa tích hợp AI vào trang của mình!",
+			"image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/final_keyword_header.width-1200.format-webp.webp",
+			"created_at": "2023-12-21T13:49:36.431Z",
+			"view_count": 1143
+		}
+	]
+}

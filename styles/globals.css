@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+:not(pre:has(code.ndng-code))::-webkit-scrollbar,
+:not(code.ndng-code)::-webkit-scrollbar {
+	@apply w-0 !important;
+}
+
+::selection {
+	@apply bg-teal-400 text-teal-950;
+}
+
+@media (max-width: 900px) {
+	html {
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 100%;
+	}
+}
+
+img {
+	object-fit: cover !important;
+}
+
+a[target='_blank'] {
+	@apply text-teal-500 drop-shadow-sm shadow-teal-700 text-lg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold my-2;
+}
+
+h1 {
+	@apply text-4xl;
+}
+h2 {
+	@apply text-3xl;
+}
+h3 {
+	@apply text-2xl;
+}
+h4 {
+	@apply text-xl;
+}
+h5 {
+	@apply text-lg;
+}
+h6 {
+	@apply text-base;
+}
+
+.mini-content h1,
+.mini-content h2,
+.mini-content h3,
+.mini-content h4,
+.mini-content h5,
+.mini-content h6 {
+	@apply text-xl p-0 m-0;
+}
+.mini-content p,
+span,
+q,
+a {
+	@apply text-base p-0 m-0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply my-2 my-4;
+}
+
+p,
+q,
+code,
+input,
+button,
+textarea,
+a,
+select {
+	@apply text-lg;
+}
+
+a {
+	@apply text-teal-500 drop-shadow-sm shadow-teal-700;
+}
+a[href^='http'] {
+	@apply hover:underline;
+}
+
+ul {
+	@apply pl-2 list-disc;
+}
+
+ul > li {
+	@apply my-2;
+}
+
+em,
+i {
+	@apply italic text-warning;
+}
+
+q {
+	quotes: none;
+}
+table tr {
+	@apply border-b border-gray-200;
+}
+table tr td,
+table tr th {
+	@apply p-2;
+}
+code:not(.ndng-code):not(:has([class*='hljs-'])) {
+	@apply text-success-600 bg-success-50 inline-block px-1 text-lg;
+}
+pre:has(code.ndng-code),
+pre code.ndng-code,
+code:has([class*='hljs-']) {
+	@apply max-w-full break-words rounded-lg;
+}
+pre:has(code.ndng-code) {
+	@apply my-4 overflow-x-auto overflow-y-hidden relative;
+}
+code.ndng-code.pt12 {
+	@apply pt-12 text-start !important;
+}
+pre:has(code.ndng-code)::-webkit-scrollbar,
+code.ndng-code::-webkit-scrollbar {
+	@apply h-2 bg-[#282a36];
+}
+pre:has(code.ndng-code)::-webkit-scrollbar-thumb,
+code.ndng-code::-webkit-scrollbar-thumb {
+	@apply bg-[#50fa7b];
+}
+pre:has(code.ndng-code) button.copy {
+	@apply bg-success absolute top-0 right-0 px-2 text-center rounded-bl-md z-10;
+}
+pre:has(code.ndng-code) span.code-lang {
+	@apply bg-[#ff79c640] text-[#8be9fd] font-bold absolute top-0 left-0 right-0 px-2 text-center w-full p-0.5;
+}
+@media (min-width: 768px) {
+	pre:has(code.ndng-code) span.code-lang::before {
+		content: 'language: ';
+		@apply font-normal text-[#f8f8f2];
+	}
+}
+
+#main-view > * {
+	@apply print:m-0 print:p-0;
+}
